@@ -14,15 +14,11 @@
  *= require_self
  */
 
- .info-splash {
-    margin: 100px auto;
- }
+.info-splash {
+  margin: 100px auto;
+}
 
- .splash-btns {
-    display: flex;
-    flex-direction: column;
- }
-
- .splash-link {
-    margin: 2px black solid;
- }
+.splash-btns {
+  display: flex;
+  flex-direction: column;
+}
