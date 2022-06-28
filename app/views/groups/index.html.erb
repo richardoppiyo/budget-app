@@ -7,6 +7,13 @@
 <div id="groups">
   <% @groups.each do |group| %>
     <%= render group %>
+
+    <% myamt = 0 %>
+    <% group.transactions.each do |transaction| %>
+      <% myamt += transaction.amount %>
+    <% end %>
+    <p>Total Amount: <%= myamt  %></p>
+
     <p>
       <%= link_to "Show this group", group %>
     </p>
