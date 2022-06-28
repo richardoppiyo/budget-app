@@ -3,7 +3,8 @@ class EntitiesController < ApplicationController
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.all
+    @current_user = current_user
+    @entity = current_user.entities
   end
 
   # GET /entities/1 or /entities/1.json
@@ -11,6 +12,7 @@ class EntitiesController < ApplicationController
 
   # GET /entities/new
   def new
+    @current_user = current_user
     @entity = Entity.new
   end
 
@@ -19,7 +21,7 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    @entity = Entity.new(entity_params)
+    @entity = current_user.entities.new(entity_params)
 
     respond_to do |format|
       if @entity.save
@@ -64,6 +66,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:authorid, :name, :amount)
+    params.require(:entity).permit(:author_id, :name, :amount)
   end
 end
