@@ -8,7 +8,11 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    # @current_user = current_user
+    # @groups = current_user.groups
+    # @transactions = @groups.transactions
+  end
 
   # GET /groups/new
   def new
