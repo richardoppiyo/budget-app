@@ -1,0 +1,8 @@
+<% flash.each do |type, msg| %>
+    <%= content_tag :div, msg, class: "#{type} alert" %>
+    <% end %>
+    <%= form_with url: "/groups/:group_id/", scope: :transaction do |f| %>
+          <%= f.text_field :name, placeholder: 'Name' %>
+          <%= f.text_field :amount, placeholder: 'Amount' %>
+          <%= f.submit "Submit" %>
+        <% end %> 
