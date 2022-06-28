@@ -3,7 +3,8 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @current_user = current_user
+    @groups = current_user.groups
   end
 
   # GET /groups/1 or /groups/1.json
@@ -11,6 +12,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/new
   def new
+    @current_user = current_user
     @group = Group.new
   end
 
@@ -19,7 +21,7 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = current_user.Group.new(group_params)
+    @group = current_user.groups.new(group_params)
 
     respond_to do |format|
       if @group.save
