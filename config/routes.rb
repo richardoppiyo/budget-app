@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
   resources :entities
-  resources :groups 
+  resources :groups do
+    resources :transactions
+  end
   
   devise_for :users
   devise_scope :user do
