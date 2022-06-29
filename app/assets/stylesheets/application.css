@@ -33,6 +33,27 @@
 .icon-image {
   width: 90px;
   height: 90px;
+  position: relative;
+  left: 10px;
+  top: 18px;
+}
+
+.name-p {
+  position: relative;
+  left: 120px;
+  top: -60px;
+}
+
+.amt-total {
+  position: relative;
+  left: 290px;
+  top: -70px;
+}
+
+.group-actions {
+  position: relative;
+  left: 120px;
+  top: -95px;
 }
 
 .my-btn {
@@ -97,4 +118,11 @@
 
 .field-remember2 {
   margin: 5px ;
+}
+
+.groups {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: blue;
 }
