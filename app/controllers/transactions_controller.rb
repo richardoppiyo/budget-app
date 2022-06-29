@@ -11,12 +11,13 @@ class TransactionsController < ApplicationController
   def new
     @current_user = current_user
     @group = Group.find_by_id(params[:group_id])
-    @transaction = @group.transaction.new
+    # # @transaction = Group.find_by_id(params[:group_id]).transactions
+    # @transactions = Group.find(params[:group_id]).transactions.new
   end
 
   def create
     @group = current_user.groups.new(group_params)
-    @transaction = current_user.transactions.new(transaction_params)
+    @transaction = current_user.groups.transactions.new(transaction_params)
 
     respond_to do |format|
       if @transaction.save
