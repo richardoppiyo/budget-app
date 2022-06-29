@@ -15,7 +15,9 @@
  */
 
 .info-splash {
-  margin: 100px auto;
+  margin: 180px auto;
+  font-family: 'Lobster', cursive;
+  text-align: center;
 }
 
 .splash-btns {
@@ -23,8 +25,13 @@
   flex-direction: column;
 }
 
-
 .icon-image {
   width: 90px;
   height: 90px;
+}
+
+.my-btn {
+  width: 80%;
+  height: 45px;
+  margin: 10px auto;
 }
