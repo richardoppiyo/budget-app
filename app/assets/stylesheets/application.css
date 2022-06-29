@@ -22,3 +22,9 @@
   display: flex;
   flex-direction: column;
 }
+
+
+.icon-image {
+  width: 90px;
+  height: 90px;
+}
