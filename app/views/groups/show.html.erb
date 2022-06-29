@@ -1,5 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
+<% if @group.icon.attached? %>
+    <image class="icon-image" src="<%=(url_for(@group.icon)) %>>
+<% end %>
+
 <%= render @group %>
 <div>
 
