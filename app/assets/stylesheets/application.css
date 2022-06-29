@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
 
+
+ .body {
+  margin-top: 0;
+ }
 .info-splash {
   margin: 180px auto;
   font-family: 'Lobster', cursive;
@@ -34,4 +39,62 @@
   width: 80%;
   height: 45px;
   margin: 10px auto;
+}
+
+.my-cstm-btn {
+  width: 80%;
+  height: 45px;
+  margin-top: 18px;
+  margin-left: 10vw;
+}
+
+.centering-items {
+  text-align: center;
+  margin: auto;
+}
+
+/* .field {
+  margin: 20px auto;
+} */
+.myclass {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  color: #fff;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.back-link {
+  color: #fff;
+}
+
+.c-actions {
+  color: #fff;
+  border: none;
+  background-color: #3778c2;
+}
+
+.myclass p {
+  padding-top: 10px;
+}
+
+.form-field {
+  margin: 20px auto;
+}
+
+.field-login {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.field-remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field-remember2 {
+  margin: 5px ;
 }
