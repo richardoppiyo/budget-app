@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
   resources :entities
   resources :groups do
-    resources :transactions
+    resources :transactions, only: [:create, :destroy, :new, :edit, :update]
   end
 
   devise_for :users
