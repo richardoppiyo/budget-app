@@ -4,11 +4,20 @@ class EntitiesController < ApplicationController
   # GET /entities or /entities.json
   def index
     @current_user = current_user
-    @entity = current_user.entities
+    @entities = current_user.entities
+    # @entities =  Entity.find(params[:author_id])
+    # @entities = @groups.entities.all
+    #   @current_user = current_user
+    #   @group = Group.find(params[:author_id])
+    #   # @purchases = Purchase.all
+    #   @group_purchases = Group.find(params[:group_id]).group_purchases.order(created_at: :desc)
   end
 
   # GET /entities/1 or /entities/1.json
-  def show; end
+  def show
+    @current_user = current_user
+    @entities = current_user.entities
+  end
 
   # GET /entities/new
   def new
@@ -21,6 +30,7 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
+    @current_user = current_user
     @entity = current_user.entities.new(entity_params)
 
     respond_to do |format|
@@ -66,6 +76,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:author_id, :name, :amount)
+    params.require(:entity).permit(:id, :name, :amount)
   end
 end

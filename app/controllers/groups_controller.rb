@@ -9,9 +9,9 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    # @current_user = current_user
-    # @groups = current_user.groups
-    # @transactions = @groups.transactions
+    @current_user = current_user
+    @groups = current_user.groups
+    # @transactions = @groups.transaction
   end
 
   # GET /groups/new
