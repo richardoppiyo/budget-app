@@ -16,6 +16,13 @@
  @import "font-awesome";
 
 
+ .body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow:hidden;
+ }
+
 .info-splash {
   margin: 180px auto;
   font-family: 'Lobster', cursive;
@@ -144,5 +151,5 @@
 }
 
 .payment2 {
-  margin-right: 20px;
+  margin-left: 20px;
 }
