@@ -5,7 +5,6 @@ class TransactionsController < ApplicationController
     @current_user = current_user
     @group = Group.find(params[:group_id])
     @transactions = Group.find(params[:group_id]).transactions.order(created_at: :desc)
-    @transaction_sum = Group.find(params[:group_id]).sum(:amount).transactions.order(created_at: :desc)
   end
 
   def new
