@@ -16,9 +16,6 @@
  @import "font-awesome";
 
 
- .body {
-  margin-top: 0;
- }
 .info-splash {
   margin: 180px auto;
   font-family: 'Lobster', cursive;
@@ -130,4 +127,22 @@
 
 .special-image-upload {
   margin: 15px;
+}
+
+.user-info {
+  margin: 5px 15px;;
+
+}
+
+.payment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment1 {
+  margin-left: 20px;
+}
+
+.payment2 {
+  margin-right: 20px;
 }
