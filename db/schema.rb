@@ -1,6 +1,4 @@
-
 ActiveRecord::Schema[7.0].define(version: 20_220_630_082_829) do # rubocop:disable Metrics/BlockLength:
-  # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
   create_table 'active_storage_attachments', force: :cascade do |t|
