@@ -5,11 +5,11 @@
   padding: 0;
   width: 100vw;
   overflow: hidden;
+  font-family: 'Ibarra Real Nova', serif;
 }
 
 .info-splash {
   margin: 180px auto;
-  font-family: 'Lobster', cursive;
   text-align: center;
 }
 
