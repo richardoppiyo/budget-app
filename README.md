@@ -98,9 +98,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Hat tip to anyone whose code was used.
+- My coding partners and Mornign session partners.
+- Inspired by [Microverse.org](https://www.microverse.org)
+- Original design by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 ## 📝 License
 
