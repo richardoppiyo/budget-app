@@ -11,7 +11,6 @@ class GroupsController < ApplicationController
   def show
     @current_user = current_user
     @groups = current_user.groups
-    # @group.icon.attach(io: File.open('/app/assets/images/01(3).jpg'), filename: '01(3).jpg', content_type: 'imaage/jpg')
     # @transactions = @groups.transaction
   end
 
