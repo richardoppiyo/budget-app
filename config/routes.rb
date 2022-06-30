@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   authenticated :user do
     root to: 'groups#index', as: :authenticated_root
   end
@@ -7,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
   resources :entities
   resources :groups do
-    resources :transactions, only: [:create, :destroy, :new, :edit, :update]
+    resources :transactions, only: %i[create destroy new edit update]
   end
 
   devise_for :users
