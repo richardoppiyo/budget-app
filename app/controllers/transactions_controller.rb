@@ -11,8 +11,6 @@ class TransactionsController < ApplicationController
   def new
     @current_user = current_user
     @group = Group.find_by_id(params[:group_id])
-    # # @transaction = Group.find_by_id(params[:group_id]).transactions
-    # @transactions = Group.find(params[:group_id]).transactions.new
   end
 
   def create
