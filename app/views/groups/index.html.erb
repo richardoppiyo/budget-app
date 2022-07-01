@@ -19,8 +19,8 @@
     <%= render group %>
     <% myamt = 0 %>
 
-    <% group.transactions.each do |transaction| %>
-      <% myamt += transaction.amount %>
+    <% group.entities.each do |transaction| %>
+      <% myamt += transaction.amount.to_i %>
     <% end %>
     
     <p class="amt-total"> $<%= myamt  %></p>
@@ -34,4 +34,4 @@
 
 <%= link_to "Add a new Category", new_group_path, class:"btn btn-light my-cstm-btn" %>
 
-<%= link_to "Add a new Entity", new_entity_path, class:"btn btn-light my-cstm-btn" %>
+
