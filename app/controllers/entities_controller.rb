@@ -32,10 +32,13 @@ class EntitiesController < ApplicationController
   def create
     @current_user = current_user
     @entity = current_user.entities.new(entity_params)
+    @group = Group.find(params[:group_id])
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to entity_url(@entity), notice: 'Entity was successfully created.' }
+        @group.transactions.create(entity_id: @entity.id)
+        # Transaction.create(@group.id,@entity.id)
+        format.html { redirect_to group_path(@group.id), notice: 'Entity was successfully created.' }
         format.json { render :show, status: :created, location: @entity }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -76,6 +79,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:entity).permit(:id, :name, :amount)
+    params.require(:transaction).permit( :name, :amount)
   end
 end
