@@ -79,6 +79,6 @@ class EntitiesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def entity_params
-    params.require(:transaction).permit( :name, :amount)
+    params.require(:transaction).permit(:name, :amount)
   end
 end
