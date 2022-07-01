@@ -1,0 +1,22 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="myclass">
+    <%= link_to "Back", users_path, class:"back-link" %>
+    <p>LOGIN</p>
+    <div >
+    <%= f.submit "Log in", class: "c-actions"  %>
+    </div>
+  </div>
+
+  <div class="form-field">
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",  placeholder: 'Email', class:"field-login" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class:"field-login"  %>
+  </div>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

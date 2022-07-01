@@ -1,0 +1,41 @@
+<div class="myclass">
+  <%= link_to "Back", groups_path, class:"back-link" %>
+  <p>DETAILS</p>
+  <div >
+  <%= link_to "Log Out", destroy_user_session_path,  class: "c-actions" %> 
+  </div>
+</div>
+<p style="color: green"><%= notice %></p>
+
+<% if @group.icon.attached? %>
+    <image class="icon-image" src="<%=(url_for(@group.icon)) %>>
+<% end %>
+
+<%= render @group %>
+
+
+<% @group.transactions.includes([:entity]).each do |transaction| %>
+  <div class="user-container-index">
+    <div class="user-info">
+      <p class="user-numbers"><strong>Transaction Name:</strong> <%= transaction.entity.name %></p>
+      <p class="user-numbers"><strong>Amount:</strong> $<%= transaction.entity.amount %></p>
+      <p class="user-numbers"><strong>Date:</strong> <%= transaction.created_at %></p>
+      <hr>
+    </div>
+</div>
+<% end %>
+<div>
+<% myamt = 0 %>
+<% @group.entities.each do |transaction| %>
+  <% myamt += transaction.amount.to_i %>
+<% end %>
+<d class="payment">
+<p class="payment1"><strong>Total Payment:</strong></p> 
+<p class="payment2">$<%= myamt  %></p>
+</div>
+
+<%= link_to "Add a new Transaction", new_group_entity_path(@group), class:"btn btn-light my-cstm-btn" %>
+
+  <%= link_to "Edit this group", edit_group_path(@group), class:"btn btn-light my-cstm-btn" %>
+  
+</div>

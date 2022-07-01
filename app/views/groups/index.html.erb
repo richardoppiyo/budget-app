@@ -1,0 +1,37 @@
+<div class="myclass">
+  <%= link_to "Back", users_path, class:"back-link" %>
+  <p>TRANSACTIONS</p>
+  <div >
+  <%= link_to "Log Out", destroy_user_session_path,  class: "c-actions" %> 
+  </div>
+</div>
+
+
+<div id="groups">
+  <% @groups.each do |group| %>
+
+      <% if group.icon.attached? %>
+      <image class="icon-image" src="<%=(url_for(group.icon)) %>>
+      <% end %>
+  
+
+  
+    <%= render group %>
+    <% myamt = 0 %>
+
+    <% group.entities.each do |transaction| %>
+      <% myamt += transaction.amount.to_i %>
+    <% end %>
+    
+    <p class="amt-total"> $<%= myamt  %></p>
+
+    <p>
+      <%= link_to "Show Category", group, class: "group-actions"  %>
+    </p>
+ 
+  <% end %>
+</div>
+
+<%= link_to "Add a new Category", new_group_path, class:"btn btn-light my-cstm-btn" %>
+
+

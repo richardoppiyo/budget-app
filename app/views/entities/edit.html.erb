@@ -1,0 +1,14 @@
+<div class="myclass">
+  <%= link_to "Back", group_entity_path, class:"back-link" %>
+  <p>An Entity</p>
+  <div >
+  <%= link_to "Log Out", destroy_user_session_path,  class: "c-actions" %> 
+  </div>
+</div>
+
+<%= render "form", entity: @entity %>
+
+<br>
+
+<div>
+</div>
