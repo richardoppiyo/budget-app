@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   end
 
   root to: 'users#index'
-  resources :entities
+  # resources :entities
   resources :groups do
-    resources :transactions, only: %i[create destroy new edit update]
+    resources :transactions
+    resources :entities
   end
 
   devise_for :users
